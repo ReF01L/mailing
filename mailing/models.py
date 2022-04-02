@@ -29,5 +29,5 @@ class Message(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=12, choices=STATUSES)
-    mailing = models.ForeignKey(Mailing, on_delete=models.SET_NULL, null=True)
+    mailing = models.ForeignKey(Mailing, on_delete=models.SET_NULL, null=True, related_name='dispatch')
     client = models.OneToOneField(Client, on_delete=models.SET_NULL, null=True)

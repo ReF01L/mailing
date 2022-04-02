@@ -8,8 +8,6 @@ from .serializers import ClientSerializer
 class ClientAPIView(mixins.CreateModelMixin,
                     mixins.UpdateModelMixin,
                     mixins.DestroyModelMixin,
-                    mixins.ListModelMixin,
-                    mixins.RetrieveModelMixin,
                     GenericViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer

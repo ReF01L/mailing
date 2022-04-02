@@ -1,3 +1,12 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Mailing, Client, Message
+
+
+class ClientAdmin(admin.ModelAdmin):
+    list_display = ("number", "mobile_code", "tags", "timezone")
+
+
+admin.site.register(Mailing)
+admin.site.register(Client, ClientAdmin)
+admin.site.register(Message)

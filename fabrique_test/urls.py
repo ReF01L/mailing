@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from mailing.views import ClientAPIView
+from mailing.views import ClientAPIView, MailingAPIView
 
 router = routers.DefaultRouter()
 router.register(r'client', ClientAPIView, basename='client')
+router.register(r'mailing', MailingAPIView, basename='mailing')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

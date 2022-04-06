@@ -4,7 +4,7 @@ from .models import Mailing, Client, Message
 
 
 class ClientAdmin(admin.ModelAdmin):
-    list_display = ("number", "mobile_code", "tags", "timezone")
+    list_display = ("number", "mobile_code", "tag", "timezone")
 
 
 admin.site.register(Mailing)
